@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.splash-page {
+  width: 100vw;
+  min-height: 100vh;
+
+  background-image: url("/employee-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-content {
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.9);
+  padding: 45px 70px;
+  border-radius: 4px;
+}
+
+.splash-content h1 {
+  color: #222;
+  font-size: 42px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 30px;
+}
+
+.splash-content button {
+  padding: 14px 30px;
+
+  background: #222;
+  color: white;
+
+  border: none;
+  border-radius: 3px;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.splash-content button:hover {
+  background: #444;
+}
+
+/* .splash-page {
+  height: 100vh;
+  background-image: url("/employee-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.splash-overlay {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.splash-content {
+  text-align: center;
+  color: white;
+}
+
+.splash-content h1 {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.splash-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.splash-content button {
+  padding: 14px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+} */

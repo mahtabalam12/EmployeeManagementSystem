@@ -1,0 +1,380 @@
+/* =================================
+   LOGIN PAGE
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f3f4f6;
+
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* =================================
+   LOGIN WINDOW
+================================= */
+
+.login-window {
+  width: 820px;
+  min-height: 500px;
+
+  display: flex;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Maximized */
+
+.login-maximized {
+  width: 100%;
+  height: 100vh;
+
+  border-radius: 0;
+}
+
+/* =================================
+   WINDOW CONTROLS
+================================= */
+
+.login-controls {
+  position: absolute;
+
+  top: 15px;
+  right: 16px;
+
+  display: flex;
+
+  gap: 7px;
+
+  z-index: 10;
+}
+
+.login-controls button {
+  width: 32px;
+  height: 32px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #f3f4f6;
+
+  color: #374151;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.login-controls button:hover {
+  background: #e5e7eb;
+}
+
+.login-controls button:last-child:hover {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+/* =================================
+   CONTENT
+================================= */
+
+.login-content {
+  width: 100%;
+
+  display: flex;
+}
+
+/* =================================
+   FORM SECTION
+================================= */
+
+.login-form-section {
+  width: 55%;
+
+  padding: 65px 55px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background: #ffffff;
+}
+
+/* =================================
+   FORM
+================================= */
+
+.login-form-section form {
+  width: 100%;
+
+  max-width: 330px;
+}
+
+/* =================================
+   WELCOME
+================================= */
+
+.login-form-section form::before {
+  content: "Welcome Back";
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  text-align: center;
+
+  color: #111827;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+/* Subtitle */
+
+.login-form-section form::after {
+  content: "Sign in to Employee Management System";
+
+  display: block;
+
+  margin-bottom: 30px;
+
+  text-align: center;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+/* =================================
+   INPUT GROUP
+================================= */
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #374151;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/* =================================
+   INPUT
+================================= */
+
+.input-group input {
+  width: 100%;
+
+  height: 46px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 9px;
+
+  background: #f9fafb;
+
+  color: #111827;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.input-group input::placeholder {
+  color: #9ca3af;
+}
+
+.input-group input:hover {
+  border-color: #9ca3af;
+}
+
+.input-group input:focus {
+  border-color: #4b5563;
+
+  background: #ffffff;
+
+  box-shadow: 0 0 0 3px rgba(75, 85, 99, 0.08);
+}
+
+/* =================================
+   LOGIN BUTTON
+================================= */
+
+.login-button {
+  width: 100%;
+
+  height: 46px;
+
+  margin-top: 6px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.login-button:hover {
+  background: #374151;
+
+  transform: translateY(-1px);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+/* =================================
+   FORGOT PASSWORD
+================================= */
+
+.forgot-password {
+  display: block;
+
+  margin: 15px auto 0;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #4b5563;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  color: #111827;
+
+  text-decoration: underline;
+}
+
+/* =================================
+   RIGHT SIDE
+================================= */
+
+.login-image-section {
+  width: 45%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: #f1f1f1;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* =================================
+   IMAGE
+================================= */
+
+.login-image-section img {
+  width: 160px;
+  height: 160px;
+
+  object-fit: contain;
+
+  filter: grayscale(100%);
+
+  opacity: 0.85;
+
+  transition: 0.25s;
+}
+
+.login-image-section img:hover {
+  opacity: 1;
+
+  transform: scale(1.04);
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 750px) {
+  .login-window {
+    width: 92%;
+
+    min-height: 500px;
+  }
+
+  .login-image-section {
+    display: none;
+  }
+
+  .login-form-section {
+    width: 100%;
+
+    padding: 60px 35px;
+  }
+}
+
+@media (max-width: 450px) {
+  .login-window {
+    width: 95%;
+  }
+
+  .login-form-section {
+    padding: 55px 25px;
+  }
+
+  .login-form-section form::before {
+    font-size: 26px;
+  }
+}

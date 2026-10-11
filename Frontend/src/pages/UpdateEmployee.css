@@ -1,0 +1,440 @@
+/* =========================
+   MAIN PAGE
+========================= */
+
+.update-page {
+  min-height: 100vh;
+  width: 100%;
+  background: white;
+  padding: 50px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* =========================
+   MAXIMIZE
+========================= */
+
+.maximized-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 50px;
+
+  z-index: 9999;
+  overflow-y: auto;
+
+  background: white;
+}
+
+/* =========================
+   TOP RIGHT CONTROLS
+========================= */
+
+.window-controls {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  display: flex;
+
+  z-index: 10000;
+}
+
+.window-controls button {
+  width: 45px;
+  height: 32px;
+
+  border: none;
+
+  background: white;
+  color: #222;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.window-controls button:hover {
+  background: #eeeeee;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.update-page h1 {
+  text-align: center;
+
+  color: #222;
+
+  font-size: 35px;
+
+  margin-bottom: 50px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.update-grid {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 25px 50px;
+}
+
+/* FORM GROUP */
+
+.form-group {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+}
+
+/* LABEL */
+
+.form-group label {
+  width: 150px;
+
+  flex-shrink: 0;
+
+  font-weight: bold;
+
+  color: #555;
+}
+
+/* INPUT + SELECT */
+
+.form-group input,
+.form-group select {
+  width: 250px;
+  height: 38px;
+
+  padding: 5px 10px;
+
+  border: 1px solid #999;
+
+  background: white;
+  color: #222;
+
+  outline: none;
+
+  box-sizing: border-box;
+}
+
+.form-group input[type="date"] {
+  cursor: pointer;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border: 1px solid #222;
+}
+
+/* =========================
+   UPDATE + BACK
+========================= */
+
+.update-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 40px;
+
+  margin-top: 50px;
+}
+
+.update-buttons button {
+  width: 150px;
+  height: 45px;
+
+  background: white;
+  color: #222;
+
+  border: 1px solid #888;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.update-buttons button:hover {
+  background: #eeeeee;
+}
+
+/* =========================
+   MINIMIZED WINDOW
+========================= */
+
+.minimized-window {
+  position: fixed;
+
+  left: 20px;
+  bottom: 20px;
+
+  width: 350px;
+  height: 55px;
+
+  background: white;
+
+  border: 1px solid #888;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  z-index: 99999;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.minimized-window span {
+  flex: 1;
+
+  color: #222;
+
+  font-weight: bold;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.minimized-window button {
+  height: 32px;
+
+  padding: 5px 12px;
+
+  background: white;
+
+  color: #222;
+
+  border: 1px solid #888;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+}
+
+.minimized-window button:hover {
+  background: #eeeeee;
+}
+
+/* ================================================= */
+/* TABLET RESPONSIVE */
+/* ================================================= */
+
+@media (max-width: 1000px) {
+  .update-page {
+    padding: 40px 30px;
+  }
+
+  .maximized-page {
+    padding: 40px 30px;
+  }
+
+  .update-page h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .update-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px 25px;
+  }
+
+  .form-group label {
+    width: 120px;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    max-width: 220px;
+  }
+}
+
+/* ================================================= */
+/* MOBILE RESPONSIVE */
+/* ================================================= */
+
+@media (max-width: 700px) {
+  /* PAGE */
+
+  .update-page {
+    padding: 30px 20px;
+  }
+
+  .maximized-page {
+    padding: 30px 20px;
+  }
+
+  /* HEADING */
+
+  .update-page h1 {
+    font-size: 25px;
+
+    margin-top: 20px;
+    margin-bottom: 35px;
+  }
+
+  /* FORM - ONE COLUMN */
+
+  .update-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  /* FORM GROUP */
+
+  .form-group {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 7px;
+  }
+
+  /* LABEL */
+
+  .form-group label {
+    width: 100%;
+
+    font-size: 14px;
+  }
+
+  /* INPUT */
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+
+    max-width: none;
+
+    height: 42px;
+  }
+
+  /* BUTTONS */
+
+  .update-buttons {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 35px;
+  }
+
+  .update-buttons button {
+    width: 100%;
+
+    height: 44px;
+  }
+
+  /* WINDOW CONTROLS */
+
+  .window-controls button {
+    width: 38px;
+    height: 30px;
+
+    font-size: 16px;
+  }
+
+  /* MINIMIZED WINDOW */
+
+  .minimized-window {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    width: auto;
+
+    height: 50px;
+
+    padding: 0 10px;
+  }
+
+  .minimized-window span {
+    font-size: 13px;
+  }
+
+  .minimized-window button {
+    height: 30px;
+
+    padding: 4px 10px;
+
+    font-size: 12px;
+  }
+}
+
+/* ================================================= */
+/* SMALL MOBILE */
+/* ================================================= */
+
+@media (max-width: 400px) {
+  .update-page {
+    padding: 25px 15px;
+  }
+
+  .maximized-page {
+    padding: 25px 15px;
+  }
+
+  .update-page h1 {
+    font-size: 22px;
+
+    margin-bottom: 30px;
+  }
+
+  .update-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .update-buttons button {
+    width: 100%;
+  }
+
+  .minimized-window span {
+    font-size: 12px;
+  }
+}
